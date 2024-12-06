@@ -1,0 +1,385 @@
+/* Custom properties */
+:root {
+    /* colors */
+    --clr-bck: #F5FCFD;
+    --clr-hvr: #5B7698;
+    --clr-prm: #253d5b;
+    --clr-sec: #DFEBF5;
+
+    /* fonts */
+    --ff-header: "Bona Nova", sans-serif;
+    --ff-main: "Open Sans", serif;
+    --ff-logo: "Kurale", serif;
+
+    /* font weights */
+    --ff-regular: 400;
+    --ff-bold: 700;
+
+}
+
+/* css reset */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  8. Remove list styling
+*/
+
+li {
+  list-style: none;
+}
+
+/* general styling */
+
+h1,
+h2,
+h3 {
+    font-family: var(--ff-header);
+    font-weight: var(--ff-regular);
+    color: var(--clr-prm);
+}
+
+p {
+    font-family: var(--ff-main);
+    line-height: 1.34rem;
+}
+
+li {
+    font-family: var(--ff-main);
+}
+
+body {
+    background-color: var(--clr-bck);
+    margin: 0 2rem;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+
+
+/* navbar */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--ff-logo);
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+
+.hidden {
+  display: none;
+}
+
+.primary-header {
+    margin-top: 2rem;
+}
+
+.primary-navigation {
+    display: none;
+}
+
+.mobile-nav-toggle {
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+}
+
+.nav-list li {
+  border-top: solid rgb(221, 221, 221);
+  height: 4rem;
+  width: 100vw;
+}
+
+.nav-list li:last-child {
+  border-bottom: solid rgb(221, 221, 221);
+}
+
+.mobile-tab-nav {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.nav-list a { 
+  text-decoration: none;
+  color: var(--clr-prm);
+  width: 100%;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.opened {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    inset: 5rem 0 0 0;
+    width: 100vw;
+    height: calc(100vh - 3.5rem);
+    z-index: 999;
+    background: var(--clr-bck);
+}
+
+.hamburger {
+  width: 30px;
+  height: 30px;
+}
+
+.hamburger__bar {
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transform-origin: center;
+  stroke: #253D5B;
+  stroke-width: 10%;
+}
+
+.hamburger__bar--top {
+  transform: translateY(-40%);
+}
+
+.hamburger__bar--bot {
+  transform: translateY(40%);
+}
+
+.is-opened .hamburger__bar--top {
+  transform: rotate(45deg);
+}
+
+.is-opened .hamburger__bar--mid {
+  transform: scaleX(0.1);
+}
+
+.is-opened .hamburger__bar--bot {
+  transform: rotate(-45deg);
+}
+
+
+/* Hero section */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-text {
+  text-align: center;
+  padding: 2rem 2rem;
+  line-height: 2.5rem;
+}
+
+.hero-img {
+  padding: 0 1rem 0 1rem;
+}
+
+.hero-btn {
+  border: none;
+  border-radius: 0;
+  margin-top: 2rem;
+  background-color: var(--clr-prm);
+  font-family: var(--ff-main);
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  padding: .75em 2em .75em 2em;
+}
+
+/* Intro section */
+
+.secondary-header {
+  line-height: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn-header {
+  display: none;
+}
+
+.intro p {
+  margin-top: 1rem;
+}
+
+.intro-list {
+  list-style-position: outside;
+  margin-top: .6rem;
+}
+
+.intro-list li {
+  margin-left: 1.5rem; /* Slightly indent the list items to align properly with the paragraph text */
+  list-style: disc;
+}
+
+.btn-header-mobile {
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+  float: right;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: .5em 1em .5em 1em;
+  border: none;
+  background: transparent;
+}
+
+.btn-header-mobile span {
+  font-family: var(--ff-main);
+  font-size: .9rem;
+  font-weight: 700;
+  color: #253D5B;
+}
+
+.btn-header-mobile img {
+  height: .75rem;
+  width: auto;
+}
+
+/* profile */
+
+.secondary-header-profile {
+  margin-top: 4rem;
+  text-align: center;
+  line-height: 2rem;
+}
+
+.profile-img {
+  margin-top: 2rem;
+}
+
+.profile-name {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+/* Contact section */
+
+.contact-box {
+  display: flex;
+  align-items: center;
+  margin-top: .5rem;
+  margin-left: 1.5rem;
+}
+
+.icon-contact {
+  height: 1.5rem;
+  margin-right: 1rem;
+}
+
+.contact-address {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.contact {
+  margin: 0 2rem;
+  margin-bottom: 2rem;
+}
+
+
+/* Footer */
+
+footer {
+  background-color: var(--clr-prm);
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+
+.footer-content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.footer-content .logo {
+  color: #FFFFFF;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.footer-content p {
+  color: #cacaca;
+  font-size: .8rem;
+  line-height: 1.2rem;
+}
+
+.map {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.responsive-iframe {
+  max-width: 600px;
+  width: 100%; /* Dostosowuje szerokość do rozmiaru ekranu */
+  aspect-ratio: 1 / 1; /* Proporcje 1:1, co sprawia, że zawsze będzie kwadratem */
+  border: 0; /* Możesz usunąć, jeśli nie chcesz obramowania */
+}

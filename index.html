@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terapia Krupa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Kurale&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+
+        <header class="primary-header">
+            <div class="container">
+                <h3 id="logo" class="logo visible">Terapia Krupa</h3>
+                <h3 id="menu-nav" class="logo hidden menu-list">Menu</h3>
+                <button class="mobile-nav-toggle">
+                    <svg id="hamburger" class="hamburger">
+                        <line x1="0" y1="50%" x2="100%" y2="50%" class="hamburger__bar hamburger__bar--top" />
+                        <line x1="0" y1="50%" x2="80%" y2="50%" class="hamburger__bar hamburger__bar--mid" />
+                        <line x1="0" y1="50%" x2="100%" y2="50%" class="hamburger__bar hamburger__bar--bot" />
+                      </svg>
+                </button>
+                <nav id="primary-navigation" class="primary-navigation">
+                    <ul class="nav-list">
+                        <li><a href="#terapia"><div class="mobile-tab-nav">Formy terapii<img src="img/icons/arrow.png" alt="Ikona strzałki w prawo"></div></a></li>
+                        <li><a href="#bio"><div class="mobile-tab-nav">O nas<img src="img/icons/arrow.png" alt="Ikona strzałki w prawo"></div></a></li>
+                        <li><a href="#kontakt"><div class="mobile-tab-nav">Kontakt<img src="img/icons/arrow.png" alt="Ikona strzałki w prawo"></div></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <div class="hero">
+            <h1 class="hero-text">Find Relief and Renewal: Discover the Healing Power of Psychotherapy Today</h1>
+            <img class="hero-img" src="img/hero.png" alt="Obraz przedstawiający gabinet terapeutyczny">
+            <button class="hero-btn">Let's get in touch</button>
+        </div>
+
+        <div id="terapia" class="intro">
+            <div class="secondary-header">
+                <h2>Themes we work with</h2>
+                <button class="btn-header">Read more</button>
+            </div>
+            <div class="intro-container">
+                <p>The themes of Foundation Transformation correspond to the fields of research and clinical expertise of its members.</p>
+                <ul class="intro-list">
+                    <li>Loss and complications of grief</li>
+                    <li>Self and identity - life crises can invoke questions regarding who I am</li>
+                    <li>Intergenerational trauma and holocaust experiences</li>
+                </ul>
+                <button class="btn-header-mobile">
+                    <span>Więcej...</span><img src="img/icons/arrow.png" alt="Strzałka w prawo">
+                </button>
+            </div>
+        </div>
+
+        <div id="bio" class="intro">
+            <div class="secondary-header-profile">
+                <h2>Nasi Terapeuci</h2>
+            </div>
+            <div class="intro-container">
+                <img class="profile-img" src="img/profile/artur.jpg" alt="Zdjęcie Artura Krupy">
+                <h3 class="profile-name">Artur Krupa</h3>
+                <p class="profile-text">Doświadczony psycholog i psychoterapeuta, poświęca się z pasją zdrowiu psychicznemu rodzin i par. Jego praktyka, oparta jest na nurtach systemowym i psychodynamicznym, co pozwala uwzględniać w trakcie sesji, indywidualne potrzeby oraz złożone relacje w rodzinach i parach.</p>
+                <button class="btn-header-mobile">
+                    <span>Więcej...</span><img src="img/icons/arrow.png" alt="Strzałka w prawo">
+                </button>
+            </div>
+            <div class="intro-container">
+                <img class="profile-img" src="img/profile/artur.jpg" alt="Zdjęcie Artura Krupy">
+                <h3 class="profile-name">Magda Krupa</h3>
+                <p class="profile-text">Doświadczony psycholog i psychoterapeuta, poświęca się z pasją zdrowiu psychicznemu rodzin i par. Jego praktyka, oparta jest na nurtach systemowym i psychodynamicznym, co pozwala uwzględniać w trakcie sesji, indywidualne potrzeby oraz złożone relacje w rodzinach i parach.</p>
+                <button class="btn-header-mobile">
+                    <span>Więcej...</span><img src="img/icons/arrow.png" alt="Strzałka w prawo">
+                </button>
+            </div>
+        </div>
+
+        <div id="kontakt" class="contact">
+            <div class="secondary-header-profile">
+                <h2>Kontakt</h2>
+            </div>
+            <h3 class="profile-name">Artur Krupa</h3>
+            <div class="contact-bio">
+                <div class="contact-box">
+                    <img class="icon-contact" src="img/icons/phone.png" alt="Ikona telefonu">
+                    <p>504-101-505</p>
+                </div>
+                <div class="contact-box">
+                    <img class="icon-contact" src="img/icons/mail.png" alt="Ikona mail">
+                    <p>artkrupa@gmail.com</p>
+                </div>
+            </div>
+            <h3 class="profile-name">Magda Krupa</h3>
+            <div class="contact-bio">
+                <div class="contact-box">
+                    <img class="icon-contact" src="img/icons/phone.png" alt="Ikona telefonu">
+                    <p>502-867-080</p>
+                </div>
+                <div class="contact-box">
+                    <img class="icon-contact" src="img/icons/mail.png" alt="Ikona mail">
+                    <p>mag.krupa@gmail.com</p>
+                </div>
+            </div>
+            <h3 class="profile-name">Adres</h3>
+            <div class="contact-box">
+                <img class="icon-contact" src="img/icons/location.png" alt="Ikona lokalizacji">
+                <p>Rynek Dębnicki 6, 30-319 Kraków</p>
+            </div>
+            <div class="map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d320.23075229586243!2d19.926100261509408!3d50.051715763053366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b71748dd6b9%3A0xe4f2340e321cf6ac!2sKancelaria%20Notarialna%20Ma%C5%82gorzata%20H%C4%99drzak-S%C5%82ota!5e0!3m2!1spl!2spl!4v1726757408868!5m2!1spl!2spl" 
+                    class="responsive-iframe"
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+            </div>
+        </div>   
+    </div> 
+    <footer class="footer-wrapper">
+        <div class="wrapper footer-content">
+            <h3 class="logo">Terapia Krupa</h3>
+            <p>Projekt: Dariusz Hyżyk</p>
+            <p>Wykonanie: Piotr Krupa</p>
+            <p>2024</p>
+        </div>
+    </footer>  
+    <script src="script.js"></script>
+</body>
+</html>
